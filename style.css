@@ -4,23 +4,23 @@
     --deep-black-color: #030303;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color:var(--deep-black-color);
+body {
+    background-color: var(--deep-black-color);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.Digital-clock-frame{
+.Digital-clock-frame {
     background: linear-gradient(var(--deep-black-color), var(--deep-black-color)) padding-box,
-    linear-gradient(100deg, var(--pink-color), var(--yellow-color)) border-box;
+        linear-gradient(100deg, var(--pink-color), var(--yellow-color)) border-box;
     border: 5px solid transparent;
     border-radius: 50px;
     width: 65%;
@@ -29,87 +29,91 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left:5%;
+    padding-left: 5%;
     position: relative;
 }
 
-.time-screen{
+.time-screen {
     background: linear-gradient(var(--pink-color), var(--yellow-color));
-    color:transparent;
+    color: transparent;
     font-size: 7.5rem;
     font-weight: 600;
-    font-family:'Orbitron';
+    font-family: 'Orbitron';
     letter-spacing: 5px;
     -webkit-background-clip: text;
-    background-clip:text;
+    background-clip: text;
 }
 
-.time-am-pm{
+.time-am-pm {
     background: linear-gradient(var(--pink-color), var(--yellow-color));
-    color:transparent;
-    font-size:35px;
-    font-family:'Orbitron';
+    color: transparent;
+    font-size: 35px;
+    font-family: 'Orbitron';
     -webkit-background-clip: text;
-    background-clip:text;
+    background-clip: text;
     margin-top: 3%;
 }
 
-.time-text{
+.time-text {
     background-color: #030303;
     color: white;
-    font-size:25px;
-    font-family:'Orbitron';
+    font-size: 25px;
+    font-family: 'Orbitron';
     position: absolute;
     bottom: -15px;
-    margin-right:50px;
+    margin-right: 50px;
     padding: 0 10px;
     letter-spacing: 2px;
-    
+
+}
+
+/* responsive for tablet */
+@media (max-width:1024px) {
+    .time-screen {
+        font-size: 5rem;
+    }
+
+    .Digital-clock-frame {
+        width: 65%;
+        height: 200px;
+        border-radius: 40px;
+        padding-left: 3%;
+    }
+
+    .time-text {
+        font-size: 15px;
+        bottom: -12px;
+    }
+
+    .time-am-pm {
+        font-size: 30px;
+    }
 }
 
 /* responsive for mobile */
 @media (max-width: 768px) {
-    .time-screen{
-    font-size: 1.7rem;
-}
-.Digital-clock-frame{
-    width: 65%;
-    height: 100px;
-    border-radius: 30px;
-}
+    .time-screen {
+        font-size: 1.7rem;
+    }
 
-.Digital-clock-frame{
-    padding-left:3%;
+    .Digital-clock-frame {
+        width: 65%;
+        height: 100px;
+        border-radius: 30px;
+    }
 
-}
-.time-text{
-    font-size:10px;
-    bottom: -9px;
-    margin-left: 10%;
-}
-.time-am-pm{
-    font-size:15px;
-}
-}
-@media (max-width:1024px) {
-    .time-screen{
-    font-size: 5rem;
-}
-.Digital-clock-frame{
-    width: 65%;
-    height: 200px;
-    border-radius: 40px;
-}
+    .Digital-clock-frame {
+        padding-left: 3%;
 
-.Digital-clock-frame{
-    padding-left:3%;
+    }
 
-}
-.time-text{
-    font-size:15px;
-    bottom: -12px;
-}
-.time-am-pm{
-    font-size:30px;
-}
+    .time-text {
+        font-size: 10px;
+        bottom: -9px;
+        margin-left: 10%;
+    }
+
+    .time-am-pm {
+        font-size: 15px;
+    }
 }
